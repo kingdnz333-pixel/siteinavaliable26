@@ -26,7 +26,7 @@ app.post("/send", async (req, res) => {
       from: 'onboarding@resend.dev',
       to: 'casaurbanacoworking@gmail.com',
       reply_to: email,
-      subject: 'Contato via site Casa Urbana',
+      subject: 'Novo contato - ${name}',
       html: `
         <h2>Novo contato</h2>
         <p><strong>Nome:</strong> ${name}</p>
