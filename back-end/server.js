@@ -16,18 +16,16 @@ app.use(cors({
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
-  const { name, email, phone, message } = req.body;
-
-  if (!name || !email || !phone || !message) {
-    return res.status(400).json({ success: false });
-  }
+  console.log("🔥 CHEGOU NO BACKEND REAL");
 
   try {
+    const { name, email, phone, message } = req.body;
+
     await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: ['kingdnz333@gmail.com', 'casaurbanacoworking@gmail.com'],
       reply_to: email,
-      subject: 'Novo contato - ${name}',
+      subject: `Novo contato - ${name}`,
       html: `
         <h2>Novo contato</h2>
         <p><strong>Nome:</strong> ${name}</p>
@@ -39,8 +37,8 @@ app.post("/send", async (req, res) => {
 
     return res.json({ success: true });
 
-  } catch (error) {
-    console.error('Erro ao enviar email:', error);
+  } catch (err) {
+    console.error("ERRO REAL:", err);
     return res.status(500).json({ success: false });
   }
 });
