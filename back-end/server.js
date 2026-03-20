@@ -1,9 +1,12 @@
+import { Resend } from 'resend';
+
 const express = require('express');
 const cors = require('cors');
-const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors({
   origin: "https://siteinavaliable26-j7vq.vercel.app",
@@ -18,37 +21,24 @@ app.post("/send", async (req, res) => {
     return res.status(400).json({ success: false, error: 'Todos os campos são obrigatórios.' });
   }
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // importante (false para 587)
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS,
-  },
-});
-
-const mailOptions = {
-  from: `"${name}" <${email}>`,
-  to: process.env.GMAIL_USER,
-  replyTo: email,
-  subject: "Contato via site Casa Urbana",
-  text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`,
-  html: `
-    <h2>Novo contato</h2>
-    <p><strong>Nome:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Telefone:</strong> ${phone}</p>
-    <p><strong>Mensagem:</strong><br>${message.replace(/\n/g, "<br>")}</p>
-  `
-};
-
   try {
-    await transporter.sendMail(mailOptions);
+    await resend.emails.send({
+      from: 'Casa Urbana <contato@casaurbana.com>', // Substitua por seu domínio verificado no Resend
+      to: 'casaurbanacoworking@gmail.com',
+      reply_to: email,
+      subject: 'Contato via site Casa Urbana',
+      html: `
+        <h2>Novo contato</h2>
+        <p><strong>Nome:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefone:</strong> ${phone}</p>
+        <p><strong>Mensagem:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+      `,
+    });
     return res.json({ success: true });
   } catch (error) {
     console.error('Erro ao enviar email:', error);
-    return res.status(500).json({ success: false, error: 'Erro interno ao enviar email.' });
+    return res.status(500).json({ success: false });
   }
 });
 
