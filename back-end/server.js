@@ -52,10 +52,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
-
-app.post("/send", async (req, res) => {
-  console.log("CHEGOU NO BACKEND");
-  console.log("BODY:", req.body);
-
-  return res.json({ success: true });
-});
