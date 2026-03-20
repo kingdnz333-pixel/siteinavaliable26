@@ -1,5 +1,4 @@
-import { Resend } from 'resend';
-
+const { Resend } = require('resend');
 const express = require('express');
 const cors = require('cors');
 
@@ -12,19 +11,20 @@ app.use(cors({
   origin: "https://siteinavaliable26-j7vq.vercel.app",
   methods: ["POST"],
 }));
+
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
   const { name, email, phone, message } = req.body;
 
   if (!name || !email || !phone || !message) {
-    return res.status(400).json({ success: false, error: 'Todos os campos são obrigatórios.' });
+    return res.status(400).json({ success: false });
   }
 
   try {
     await resend.emails.send({
-      from: 'Casa Urbana <contato@casaurbana.com>', // Substitua por seu domínio verificado no Resend
-      to: 'casaurbanacoworking@gmail.com',
+      from: 'onboarding@resend.dev',
+      to: 'kingdnz333@gmail.com',
       reply_to: email,
       subject: 'Contato via site Casa Urbana',
       html: `
@@ -35,7 +35,9 @@ app.post("/send", async (req, res) => {
         <p><strong>Mensagem:</strong><br>${message.replace(/\n/g, '<br>')}</p>
       `,
     });
+
     return res.json({ success: true });
+
   } catch (error) {
     console.error('Erro ao enviar email:', error);
     return res.status(500).json({ success: false });
@@ -47,5 +49,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
