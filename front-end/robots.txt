@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /content/
+Disallow: /components/
+
+Sitemap: https://casaurbana.com.br/sitemap.xml

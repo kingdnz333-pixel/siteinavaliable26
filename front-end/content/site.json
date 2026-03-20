@@ -1,0 +1,143 @@
+{
+  "site": {
+    "title": "Casa Urbana Coworking",
+    "description": "Coworking em Rio Branco: espaços de trabalho, salas privativas, salas de reunião e endereço fiscal.",
+    "email": "casaurbanacoworking@gmail.com",
+    "phone": "+55 68 2102-5931",
+    "whatsapp": "+556821025931",
+    "address": "Avenida Ceará, n°388 | Habitasa | Rio Branco | Acre - Brasil​",
+    "maps_link": "https://maps.app.goo.gl/Gnvfrvp9oYgAsirQ6"
+  },
+  "hero": {
+    "title": "Trabalhe, crie e cresça",
+    "subtitle": "Um espaço pensado para produtividade, conexão e inovação.",
+    "image": "assets/img/hero.jpg",
+    "cta_primary": "Agendar visita",
+    "cta_secondary": "Planos"
+  },
+  "services": [
+    {
+      "id": 1,
+      "icon": "💻",
+      "title": "Coworking Desk",
+      "description": "Estações equipadas com internet rápida, tomadas e ambiente colaborativo."
+    },
+    {
+      "id": 2,
+      "icon": "🏢",
+      "title": "Sala Privativa",
+      "description": "Espaços fechados para sua equipe trabalhar com concentração e privacidade."
+    },
+    {
+      "id": 3,
+      "icon": "🤝",
+      "title": "Sala de Reunião",
+      "description": "Ambiente moderno para apresentações, workshops e reuniões com clientes."
+    },
+    {
+      "id": 4,
+      "icon": "📬",
+      "title": "Endereço Fiscal",
+      "description": "Endereço profissional para registro, recepção de correspondências e credibilidade."
+    }
+  ],
+  "benefits": [
+    {
+      "id": 1,
+      "icon": "⚡",
+      "title": "Internet rápida",
+      "description": "Conexão estável e de alta velocidade para todas as atividades."
+    },
+    {
+      "id": 2,
+      "icon": "🏢",
+      "title": "Ambiente profissional",
+      "description": "Espaços com design minimalista e postura corporativa."
+    },
+    {
+      "id": 3,
+      "icon": "🤝",
+      "title": "Networking",
+      "description": "Conecte-se com profissionais de diversas áreas e troque experiências."
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "src": "assets/img/gallery1.jpg",
+      "alt": "Área de coworking"
+    },
+    {
+      "id": 2,
+      "src": "assets/img/gallery2.jpg",
+      "alt": "Sala de reunião"
+    },
+    {
+      "id": 3,
+      "src": "assets/img/gallery3.jpg",
+      "alt": "Mesa compartilhada"
+    },
+    {
+      "id": 4,
+      "src": "assets/img/gallery4.jpg",
+      "alt": "Ambiente de trabalho"
+    },
+    {
+      "id": 5,
+      "src": "assets/img/gallery5.jpg",
+      "alt": "Estação de trabalho"
+    },
+    {
+      "id": 6,
+      "src": "assets/img/gallery6.jpg",
+      "alt": "Sala privativa"
+    },
+    {
+      "id": 7,
+      "src": "assets/img/gallery7.jpg",
+      "alt": "Vista do coworking"
+    },
+    {
+      "id": 8,
+      "src": "assets/img/gallery8.jpg",
+      "alt": "Espaço colaborativo"
+    },
+    {
+      "id": 9,
+      "src": "assets/img/gallery9.jpg",
+      "alt": "Ambiente moderno"
+    },
+    {
+      "id": 10,
+      "src": "assets/img/gallery10.jpg",
+      "alt": "Área comum"
+    },
+    {
+      "id": 11,
+      "src": "assets/img/gallery11.jpg",
+      "alt": "Coworking interior"
+    },
+    {
+      "id": 12,
+      "src": "assets/img/gallery12.jpg",
+      "alt": "Espaço de trabalho"
+    }
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "question": "Qual é o horário de funcionamento?",
+      "answer": "Funcionamos 24 horas por dia. Você pode acessar o espaço a qualquer momento com seu cartão de acesso."
+    },
+    {
+      "id": 2,
+      "question": "Posso agendar uma visita?",
+      "answer": "Sim! Clique em 'Agendar visita' ou entre em contato por WhatsApp para marcar uma visita em horário que funcione para você."
+    },
+    {
+      "id": 3,
+      "question": "Há flexibilidade nos planos?",
+      "answer": "Temos planos mensais e anuais. Cada plano pode ser ajustado conforme suas necessidades. Entre em contato para personalização."
+    }
+  ]
+}
