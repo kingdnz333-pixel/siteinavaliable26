@@ -5,7 +5,10 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://siteinavaliable26-j7vq.vercel.app",
+  methods: ["POST"],
+}));
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
