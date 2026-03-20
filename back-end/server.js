@@ -9,7 +9,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors({
   origin: "https://siteinavaliable26-j7vq.vercel.app",
-  methods: ["POST"],
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
 }));
 
 app.use(express.json());
@@ -50,4 +51,11 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+app.post("/send", async (req, res) => {
+  console.log("CHEGOU NO BACKEND");
+  console.log("BODY:", req.body);
+
+  return res.json({ success: true });
 });
