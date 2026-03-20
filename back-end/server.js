@@ -24,7 +24,7 @@ app.post("/send", async (req, res) => {
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'kingdnz333@gmail.com',
+      to: 'casaurbanacoworking@gmail.com',
       reply_to: email,
       subject: 'Contato via site Casa Urbana',
       html: `
