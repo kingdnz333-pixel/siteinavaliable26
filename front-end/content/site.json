@@ -121,6 +121,11 @@
       "id": 12,
       "src": "assets/img/gallery12.jpg",
       "alt": "Espaço de trabalho"
+    },
+    {
+      "id": 13,
+      "src": "assets/img/hero.jpg",
+      "alt": "Foto do inicio"
     }
   ],
   "faq": [
